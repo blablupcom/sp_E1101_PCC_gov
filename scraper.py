@@ -109,6 +109,10 @@ for link in links:
         link_text = link.text.strip()
         csvMth = link_text[:3]
         csvYr = url.split('.csv')[0][-4:]
+        if 'PaymentsOver500DecemberExcel' in url:
+            csvYr = '2017'
+        if 'Spends_over_500_November' in url:
+            csvYr = '2017'
         if '14_0' in csvYr:
             csvYr = '2014'
         if '16_0' in csvYr:
